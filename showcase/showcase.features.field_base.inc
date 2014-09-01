@@ -1,22 +1,22 @@
 <?php
 /**
  * @file
- * solution.features.field_base.inc
+ * showcase.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function solution_field_default_field_bases() {
+function showcase_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_solution_image'
-  $field_bases['field_solution_image'] = array(
+  // Exported field_base: 'field_showcase_image'
+  $field_bases['field_showcase_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_solution_image',
+    'field_name' => 'field_showcase_image',
     'foreign keys' => array(
       'fid' => array(
         'columns' => array(
