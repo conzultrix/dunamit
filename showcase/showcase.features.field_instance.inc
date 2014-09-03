@@ -93,7 +93,7 @@ function showcase_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '',
+      'min_resolution' => '1040x400',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),

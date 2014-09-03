@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Dunamit Basic feature.
  */
+
+include_once 'dunamit_basic.features.inc';

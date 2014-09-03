@@ -89,6 +89,9 @@ function showcase_strongarm() {
         'title' => array(
           'weight' => '-5',
         ),
+        'path' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(),
     ),
