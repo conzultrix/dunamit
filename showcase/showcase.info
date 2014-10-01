@@ -3,7 +3,6 @@ core = 7.x
 package = Dunamit
 version = 7.x-0.1-alpha1
 project = showcase
-dependencies[] = ctools
 dependencies[] = ds
 dependencies[] = features
 dependencies[] = image

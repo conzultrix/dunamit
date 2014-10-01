@@ -22,9 +22,19 @@ function showcase_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'link' => '1',
+        'link' => '0',
         'wrapper' => 'h2',
         'class' => '',
+      ),
+    ),
+    'node_link' => array(
+      'weight' => '3',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link text' => 'Learn More',
+        'wrapper' => 'div',
+        'class' => 'btn',
       ),
     ),
   );
@@ -52,12 +62,14 @@ function showcase_ds_layout_settings_info() {
         0 => 'field_showcase_image',
         1 => 'title',
         2 => 'body',
+        3 => 'node_link',
       ),
     ),
     'fields' => array(
       'field_showcase_image' => 'ds_content',
       'title' => 'ds_content',
       'body' => 'ds_content',
+      'node_link' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
