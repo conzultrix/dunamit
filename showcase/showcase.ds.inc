@@ -17,28 +17,34 @@ function showcase_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'showcase';
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
-    'title' => array(
+    'showcase_formatted_info' => array(
       'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
-      'formatter_settings' => array(
-        'link' => '0',
-        'wrapper' => 'h2',
-        'class' => '',
-      ),
-    ),
-    'node_link' => array(
-      'weight' => '3',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'link text' => 'Learn More',
-        'wrapper' => 'div',
-        'class' => 'btn',
-      ),
     ),
   );
   $export['node|showcase|teaser'] = $ds_fieldsetting;
+
+  return $export;
+}
+
+/**
+ * Implements hook_ds_custom_fields_info().
+ */
+function showcase_ds_custom_fields_info() {
+  $export = array();
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'showcase_formatted_info';
+  $ds_field->label = 'Showcase formatted info';
+  $ds_field->field_type = 3;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = 'showcase|teaser';
+  $ds_field->properties = array();
+  $export['showcase_formatted_info'] = $ds_field;
 
   return $export;
 }
@@ -60,16 +66,12 @@ function showcase_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_showcase_image',
-        1 => 'title',
-        2 => 'body',
-        3 => 'node_link',
+        1 => 'showcase_formatted_info',
       ),
     ),
     'fields' => array(
       'field_showcase_image' => 'ds_content',
-      'title' => 'ds_content',
-      'body' => 'ds_content',
-      'node_link' => 'ds_content',
+      'showcase_formatted_info' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
