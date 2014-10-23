@@ -32,6 +32,12 @@ function dunamit_basic_context_default_contexts() {
           'region' => 'header',
           'weight' => '-10',
         ),
+        'views-products-block' => array(
+          'module' => 'views',
+          'delta' => 'products-block',
+          'region' => 'footer',
+          'weight' => '-10',
+        ),
       ),
     ),
   );
