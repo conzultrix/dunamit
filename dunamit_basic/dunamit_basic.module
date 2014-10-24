@@ -5,3 +5,41 @@
  */
 
 include_once 'dunamit_basic.features.inc';
+
+/**
+ * Implements hook_block_info().
+ *
+ */
+function dunamit_basic_block_info() {
+  $blocks['dunamit_copyright'] = array(
+    'info' => t('Dunamit Copyright'),
+    'cache' => DRUPAL_NO_CACHE
+    // DRUPAL_CACHE_PER_ROLE will be assumed if not set.
+  );
+  
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ *
+ */
+function dunamit_basic_block_view($delta = '') {
+  $block = array();
+  
+  switch ($delta) {
+    
+    case 'dunamit_copyright':
+      $startyear = 2014;
+      $currentyear = date('Y');
+      $year = ($currentyear > $startyear) ? $startyear . ' - ' . $currentyear : $startyear;
+      $block['suject'] = t('Copyright');
+      $block['content'] = '<div class="copyright">&#169; Copyright '
+        . $year
+        . ' Dunam-IT. '
+        . 'All Rights Reserved'
+        . '</div>';
+  }
+  
+  return $block;
+}

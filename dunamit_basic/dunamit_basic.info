@@ -5,6 +5,7 @@ version = 7.x-0.1-alpha1
 project = dunamit_basic
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = dunamit_info
 dependencies[] = features
 dependencies[] = filter
 dependencies[] = nodequeue
