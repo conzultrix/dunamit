@@ -4,6 +4,7 @@ package = Dunamit
 version = 7.x-0.1-alpha1
 project = dunamit_basic
 dependencies[] = context
+dependencies[] = context_omega
 dependencies[] = ctools
 dependencies[] = dunamit_info
 dependencies[] = features
