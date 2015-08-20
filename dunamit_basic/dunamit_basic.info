@@ -12,6 +12,7 @@ dependencies[] = nodequeue
 dependencies[] = search
 dependencies[] = strongarm
 dependencies[] = views
+features[context][] = front_page
 features[context][] = sitewide
 features[ctools][] = context:context:3
 features[ctools][] = strongarm:strongarm:1
