@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Dunamit Storyboard feature.
+ */
+
+include_once 'dunamit_storyboard.features.inc';
