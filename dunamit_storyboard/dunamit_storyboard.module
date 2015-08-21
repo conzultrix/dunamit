@@ -5,3 +5,47 @@
  */
 
 include_once 'dunamit_storyboard.features.inc';
+
+
+/**
+ * Implements hook_block_info
+ */
+function dunamit_storyboard_block_info() {
+  $blocks['storyboard_details'] = array(
+    'info' => t('Storyboard Details'),
+    'cache' => DRUPAL_NO_CACHE,
+    // DRUPAL_CACHE_PER_ROLE will be assumed if not set.
+  );
+  
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view
+ */
+function dunamit_storyboard_block_view($delta = '') {
+  $block = array(); 
+
+  switch ($delta) {
+    
+    case 'storyboard_details' :
+      $node = menu_get_object();
+      if (!empty($details = _dunamit_storyboard_get_storyboard_details($node))) {
+        $block['subject'] = t('');
+        $block['content'] = $details;
+      }
+      break;
+  }
+  
+  return $block;
+  
+}
+
+function _dunamit_storyboard_get_storyboard_details($node) {
+  if (isset($node->type) && $node->type == 'storyboard') {
+    if (!empty($node->field_storyboard_details)) {
+      // get the details field from the storyboard
+      return $node->field_storyboard_details[LANGUAGE_NONE][0]['safe_value'];
+    }
+  }
+}
