@@ -28,5 +28,5 @@ features[variable][] = menu_parent_storyboard
 features[variable][] = node_options_storyboard
 features[variable][] = node_preview_storyboard
 features[variable][] = node_submitted_storyboard
-features[variable][] = pathauto_node_showcase_pattern
+features[variable][] = pathauto_node_storyboard_pattern
 project path = sites/all/modules/dunamit_features
