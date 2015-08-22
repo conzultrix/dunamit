@@ -75,6 +75,7 @@ function product_views_default_views() {
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['style_options']['class'] = 'l-grid';
+  $handler->display->display_options['style_options']['wrapper_class'] = 'product-list';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
